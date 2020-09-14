@@ -23,31 +23,11 @@ deacclimation_rate=[]
 theta=[]
 writer_1=pd.ExcelFile("C:\\Users\\haoli\\OneDrive\\Work\\Hardiness\\Model_for_distribution_beta_v2.7 (1) (1).xls")
 par_df= writer_1.parse('input_parameters')
-# data_frame[["Theta"]]
-# Theta=data_frame[1,"Theta"]
-# input_parameters=data_frame.loc[0,"Theta"]
-# =============================================================================
-# variety = Cells(2, 1)
-# Hc_initial = Cells(2, 2)
-# Hc_min = Cells(2, 3)
-# Hc_max = Cells(2, 4)
-# T_threshold(1) = Cells(2, 5)
-# T_threshold(2) = Cells(2, 6)
-# ecodormancy_boundary = Cells(2, 7)
-# acclimation_rate(1) = Cells(2, 8)
-# acclimation_rate(2) = Cells(2, 9)
-# deacclimation_rate(1) = Cells(2, 10)
-# deacclimation_rate(2) = Cells(2, 11)
-# theta=[0,0,0]
-# theta[1] = 1
-# theta[2] = Cells(2, 12)
-# =============================================================================
-
 variety = par_df.iloc[0, 0]
 Hc_initial = par_df.iloc[0, 1]
 Hc_min = par_df.iloc[0, 2]
 Hc_max = par_df.iloc[0, 3]
-T_threshold = [0] # 0 is a place holder to match Excel file format
+T_threshold = [0] # 0 is a place holder to match Excel file format, same below
 T_threshold.append(par_df.iloc[0, 4])
 T_threshold.append(par_df.iloc[0, 5])
 ecodormancy_boundary = par_df.iloc[0, 6]
@@ -61,7 +41,6 @@ deacclimation_rate.append(par_df.iloc[0, 10])
 theta=[0,0,0]
 theta[1] = 1
 theta[2] = par_df.iloc[0, 11]
-
 # calculate range of hardiness values possible, this is needed for the logistic component
 Hc_range = Hc_min - Hc_max
 DD_heating_sum = 0
@@ -123,7 +102,7 @@ for j in range(0,len(input_temps)):
     model_Hc_yesterday = model_Hc
 ending_clock = datetime.now()
 print(ending_clock-starting_clock)
-    
+# R7-3700X-16GB 0:00:01.319256
         
         
         
