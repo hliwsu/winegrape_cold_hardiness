@@ -104,6 +104,7 @@ ending_clock = datetime.now()
 print(ending_clock-starting_clock)
 # R7-3700X-16GB 0:00:01.179937
 # i7-3610qm-12GB 0:00:02.441757
+# i3-6100u-12GB 0:00:02.4
         
         
         
